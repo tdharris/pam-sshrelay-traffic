@@ -1,19 +1,19 @@
 #!/bin/bash
-DEFAULT_SSHRELAY_SERVER=''
+DEFAULT_SSHRELAY_SERVER='tharris17.lab.novell.com'
 DEFAULT_SSHRELAY_PORT=2222
 DEFAULT_SUBMIT_USER='admin'
-DEFAULT_SUBMIT_USER_PASS=''
+DEFAULT_SUBMIT_USER_PASS='novell123'
 DEFAULT_RUN_USER='root'
-DEFAULT_RUN_HOST=''
+DEFAULT_RUN_HOST='tharris7.lab.novell.com'
 
 clear
-read -p "PAM sshrelay server ($DEFAULT_SSHRELAY_SERVER): " sshrelayServer
-read -p "PAM sshrelay port ($DEFAULT_SSHRELAY_PORT): " sshrelayPort
+read -p "SSH Relay Server ($DEFAULT_SSHRELAY_SERVER): " sshrelayServer
+read -p "SSH Relay Server Port ($DEFAULT_SSHRELAY_PORT): " sshrelayPort
 read -p "Submit User ($DEFAULT_SUBMIT_USER): " submitUser
 read -s -p "Submit User password ($DEFAULT_SUBMIT_USER_PASS): " pass
 echo
-read -p "Run user ($DEFAULT_RUN_USER): " runUser
-read -p "Run host ($DEFAULT_RUN_HOST): " runHost
+read -p "Run User ($DEFAULT_RUN_USER): " runUser
+read -p "Run Host ($DEFAULT_RUN_HOST): " runHost
 
 sshrelayServer=${sshrelayServer:-$DEFAULT_SSHRELAY_SERVER}
 sshrelayPort=${sshrelayPort:-$DEFAULT_SSHRELAY_PORT}
